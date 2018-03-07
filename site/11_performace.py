@@ -35,7 +35,7 @@ def m3():
 def m4():
     start_time = time.time()
     out_str = ''.join(['chaomeng' for num in xrange(loop_count)])
-    print time.time() - start_time
+    # print time.time() - start_time
     return out_str
 
 if __name__ == '__main__':
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     # profile.run('m2()')
     # profile.run('m3()')
     # profile.run('m4()')
-    m1()
-    m2()
-    m3()
-    m4()
+    # m1()
+    # m2()
+    # m3()
+    print(m4())
