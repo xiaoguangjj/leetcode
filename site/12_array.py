@@ -36,10 +36,13 @@ if __name__=='__main__':
     arr = [3,5,8,7,8,10]#7-8 与8-7 数组位置不同 得到的结果不同
     # arr = [7, 6, 23,19,10,11, 9, 3, 15]
     d = 15
-    print(array_diff(arr,d))
+    # print(array_diff(arr,d))
 
     k = 15
-    print array_sum(arr,k)
+    # print array_sum(arr,k)
     # print array_sum_1(arr,k)
     #
-    print array_check(arr, k)
+    # print array_check(arr, k)
+
+    assert 1==2
+    print('1')
