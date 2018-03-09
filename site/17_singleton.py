@@ -1,3 +1,6 @@
+# -*-encoding:UTF-8 -*-
+
+#装饰器实现 单例模式
 
 def fun1(fun):
     print 'fun1 action'
