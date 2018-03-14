@@ -47,7 +47,7 @@ if __name__ == '__main__':
     print(JS)
 
     numJS = Solution().numJewels_dic(J, S)
-    print(numJS)
+    # print(numJS)
 
     numJSIn = Solution().numJewelsIn(J, S)
-    print(numJSIn)
+    # print(numJSIn)
