@@ -12,7 +12,6 @@ d['4'] = 4
 for k,v in d.items():
     print k,v
 
-print '----------'
 d = collections.OrderedDict()
 d['1'] = 1
 d['2'] = 2
