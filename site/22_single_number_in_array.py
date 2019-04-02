@@ -24,6 +24,7 @@ def singlenumber(nums):
         num ^= i
     return num
 
+
 if __name__=='__main__':
     a = [1,2,3,4,1,2,3]
     print(singlenumber(a))
