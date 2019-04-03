@@ -21,9 +21,7 @@ class Solution(object):
         Do not return anything, modify nums in-place instead.
         """
         t = k % len(nums)
-        print(k, len(nums), t)
         nums[:] = nums[-t:] + nums[: -t]
-        print(nums[-t:], nums[:-t])
         return nums
 
     def rotate_2(self, nums, k):
@@ -47,6 +45,7 @@ class Solution(object):
         :rtype: void Do not return anything, modify nums in-place instead.
         """
         for _ in range(k % len(nums)):
+            print(k, nums)
             nums.insert(0, nums[-1])
             nums.pop()
         return nums
