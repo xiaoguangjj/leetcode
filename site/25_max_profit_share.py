@@ -39,5 +39,5 @@ class Solution(object):
 
 
 if __name__=='__main__':
-    a = [7,1,5,3,6,4]
+    a = [1,2,3,4,5]
     print(Solution().maxProfit(a))
