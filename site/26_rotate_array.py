@@ -45,7 +45,6 @@ class Solution(object):
         :rtype: void Do not return anything, modify nums in-place instead.
         """
         for _ in range(k % len(nums)):
-            print(k, nums)
             nums.insert(0, nums[-1])
             nums.pop()
         return nums
