@@ -36,5 +36,5 @@ class Solution(object):
 
 
 if __name__=='__main__':
-    x = 2 ** 31
+    x = 123
     print(Solution().reverse(x))
