@@ -35,6 +35,6 @@ class Solution(object):
         return x
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     x = 123
     print(Solution().reverse(x))
