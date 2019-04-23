@@ -50,19 +50,24 @@ class PrintNode():
 
 
 if __name__ == '__main__':
-    node1=Node(90)
-    node2=Node(34)
-    node3=Node(89)
-    node4=Node(77)
-    node5=Node(23)
-    node1.next=node2
-    node2.next=node3
-    node3.next=node4
-    node4.next=node5
+    node1 = Node(1)
+    node2 = Node(2)
+    node3 = Node(3)
+    node4 = Node(4)
+    node5 = Node(5)
+    # node6 = Node(6)
+
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    node4.next = node5
     print('init single linknode is:')
-    printnode=PrintNode()
+    printnode = PrintNode()
     printnode.print_node(node1)
-    delete=DeleteNode()
+    delete = DeleteNode()
     delete.delete_node(node4)
     print('after delete node,the single linknode is:')
+    printnode.print_node(node1)
+    node5.next = node6
+    print('add node,the single linknode is:')
     printnode.print_node(node1)
