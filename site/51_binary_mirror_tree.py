@@ -89,34 +89,6 @@ class Solution:
         post_order(tree.right)
         print(tree.data)
 
-    # 层次打印
-    def level_print(self, tree):
-        if tree == None:
-            return
-        q = []
-        q.append(tree)
-        results = {}
-        level = 0
-        current_level_num = 1
-        nextlevelnum = 0
-        d = []
-        while q:
-            current = q.pop(0)
-            current_level_num -= 1
-            d.append(current.val)
-            if current.left != None:
-                q.append(current.left)
-                nextlevelnum += 1
-            if current.right != None:
-                q.append(current.right)
-                nextlevelnum += 1
-            if current_level_num == 0:
-                current_level_num = nextlevelnum
-                nextlevelnum = 0
-                results[level] = d
-                d = []
-                level += 1
-        # print(results)
 
 
 if __name__=='__main__':
