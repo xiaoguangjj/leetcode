@@ -41,9 +41,9 @@ class Solution(object):
 
 
 if __name__=='__main__':
-    nums1 = [1,2,3,0,0,0]#0的位置用来方nums2
+    nums1 = [1, 2, 3, 0, 0, 0]#0的位置用来方nums2
     m = 3
-    nums2 = [2,5,6]
+    nums2 = [2, 5, 6]
     n = 3
     s = Solution()
     s.merge(nums1,m,nums2,n)
