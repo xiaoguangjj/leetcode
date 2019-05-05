@@ -40,7 +40,7 @@ class Solution(object):
             nums1[:n] = nums2[:n]  # 把剩下nums2加在最开始
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     nums1 = [1, 2, 3, 0, 0, 0]#0的位置用来方nums2
     m = 3
     nums2 = [2, 5, 6]
