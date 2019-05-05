@@ -21,6 +21,7 @@
 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
 """
 
+
 class Solution(object):
     def maxProfit(self, prices):
         """
@@ -37,6 +38,6 @@ class Solution(object):
         return max_profile
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     a = [7, 1, 5, 3, 6, 4]
     print(Solution().maxProfit(a))
