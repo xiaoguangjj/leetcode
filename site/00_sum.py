@@ -1,6 +1,7 @@
 #coding=utf-8
 
 import json
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -13,17 +14,21 @@ class Solution(object):
                 if nums[i] + nums[j] == target :
                     return i, j
 
+
 def stringToIntegerList(input):
     return json.loads(input)
 
+
 def stringToInt(input):
     return int(input)
+
 
 def integerListToString(nums, len_of_list=None):
     if not len_of_list:
         print (nums)
         len_of_list = len(nums)
     return json.dumps(nums[:len_of_list])
+
 
 def main():
     import sys
@@ -34,6 +39,7 @@ def main():
     ret = Solution().twoSum(nums, target)
     out = integerListToString(ret)
     print (out)
+
 
 if __name__ == '__main__':
     main()

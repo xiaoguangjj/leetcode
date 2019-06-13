@@ -1,4 +1,5 @@
-#coding=utf-8
+# coding=utf-8
+
 
 class Solution(object):
     def judgeCircle(self, moves):

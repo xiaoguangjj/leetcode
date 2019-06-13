@@ -9,6 +9,7 @@
 
 """
 
+
 class Solution:
     def FindNumsAppearOnce(self, array):
         if len(array) <= 0:

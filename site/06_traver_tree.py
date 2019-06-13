@@ -1,11 +1,13 @@
 #coding=utf-8
 
+
 class Node(object):
     """节点类"""
     def __init__(self, elem=-1, lchild = Node, rchild = Node):
         self.elem = elem
         self.lchild = lchild
         self.rchild = rchild
+
 
 class Tree(object):
     """树类"""
@@ -16,11 +18,11 @@ class Tree(object):
     def add(self, elem):
         """为树添加节点"""
         node = Node(elem)
-        if self.root.elem == -1:    #如果树是空的，则对根节点赋值
+        if self.root.elem == -1:    # 如果树是空的，则对根节点赋值
             self.root = node
             self.myQueue.append(self.root)
         else:
-            treeNode = self.myQueue[0]  #此结点的子树还没齐
+            treeNode = self.myQueue[0]  # 此结点的子树还没齐
             if treeNode.lchild == Node:
                 treeNode.lchild = node
                 self.myQueue.append(treeNode.lchild)

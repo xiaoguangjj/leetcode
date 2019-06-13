@@ -1,6 +1,7 @@
 #coding=utf-8
 
-#计算海明距离
+
+# 计算海明距离
 class Solution(object):
     def hammingDistance(self, x, y):
         """

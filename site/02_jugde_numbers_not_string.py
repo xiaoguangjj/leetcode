@@ -2,7 +2,9 @@
 
 # Filename : test.py
 # author by : www.runoob.com
-#判断字符串是否为数字
+
+# 判断字符串是否为数字
+
 
 def is_number(s):
     try:

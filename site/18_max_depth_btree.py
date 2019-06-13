@@ -1,8 +1,7 @@
 # -*-encoding:UTF-8 -*-
 
 
-
-#二叉树的最大深度
+# 二叉树的最大深度
 class Max():
     def maxDepth(self, root):
         """
@@ -24,4 +23,4 @@ class MaxDepth():
             return 0
         leftChildHeight=self.maxDepth(root.lef)
         rightChidHeight=self.maxDepth(root.right)
-        return max(leftChildHeight,rightChidHeight) + 1
+        return max(leftChildHeight, rightChidHeight) + 1

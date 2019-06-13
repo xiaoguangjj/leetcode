@@ -1,6 +1,6 @@
 # -*-encoding:UTF-8 -*-
 
-#outputs the string representation of numbers from 1 to n.
+# outputs the string representation of numbers from 1 to n.
 # 3的倍数 用Fizz替代，5的倍数用Buzz替代
 
 

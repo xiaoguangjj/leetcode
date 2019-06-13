@@ -3,6 +3,7 @@
 # some nodes of the two trees are overlapped while the others are not.
 
 # Defination for a binary tree node
+
 class TreeNode(object):
    def __init__(self,x):
        self.val = x
