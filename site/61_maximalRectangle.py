@@ -17,6 +17,7 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 
+
 class Solution:
     def stack(self,heights):
         stack = [-1]
@@ -89,6 +90,8 @@ if __name__=='main':
         ["1", "1", "1", "1", "1"],
         ["1", "0", "0", "1", "0"]
     ]
-    a = Solution.maximalRectangle_1(maxarea)
+    # 实例化类
+    t = Solution()
+    a = t.maximalRectangle_1(maxarea)
     print(a)
 
