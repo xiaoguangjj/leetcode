@@ -21,7 +21,7 @@ import re
 """
 
 
-class Solution(object):
+class Solution:
     def myAtoi(self, str):
         """
         :type str: str

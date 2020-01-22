@@ -26,7 +26,7 @@
 """
 
 
-class Solution(object):
+class Solution:
     def climbStairs(self, n):
         """
         :type n: int

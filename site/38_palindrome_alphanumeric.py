@@ -9,7 +9,7 @@ https://www.cnblogs.com/tianrunzhi/p/10382068.html
 """
 
 
-class Solution(object):
+class Solution:
     def isPalindrome(self, s):
         """
         :type s: str

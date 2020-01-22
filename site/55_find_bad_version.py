@@ -27,7 +27,7 @@ def isBadVersion(n):
         return True
 
 
-class Solution(object):
+class Solution:
     def firstBadVersion(self, n):
         """
         :type n: int

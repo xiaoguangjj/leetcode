@@ -19,7 +19,7 @@ Output: 21
 """
 
 
-class Solution(object):
+class Solution:
     def reverse(self, x):
         """
         :type x: int

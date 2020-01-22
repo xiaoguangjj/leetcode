@@ -13,8 +13,6 @@
 输出: [1,2,4]
 解释: 输入数组表示数字 123。
 """
-
-
 class Solution:
     def plusOne(self, digits):
         for i in range(len(digits)):

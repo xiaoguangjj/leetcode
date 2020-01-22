@@ -1,5 +1,5 @@
 
-class Solution(object):
+class Solution:
     def maxPathSum(self, root):
         def dfs(node):  # returns: max one side path sum, max path sum
             l = r = 0
@@ -16,4 +16,4 @@ class Solution(object):
         return 0
 
 if __name__=='__main__':
-    Solution.maxPathSum()
+    Solution().maxPathSum(root)

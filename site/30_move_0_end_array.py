@@ -8,8 +8,6 @@
 输入: [0,1,0,3,12]
 输出: [1,3,12,0,0]
 """
-
-
 class Solution(object):
     def moveZeroes(self, nums):
         """

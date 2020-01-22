@@ -26,9 +26,7 @@
   [9,6,3]
 ]
 """
-
-
-class Solution(object):
+class Solution:
 
     def rotate(self, matrix):
         """

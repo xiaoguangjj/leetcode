@@ -19,8 +19,7 @@ nums2 = [2,5,6],       n = 3
 """
 
 
-class Solution(object):
-
+class Solution:
     def merge(self, nums1, m, nums2, n):
         """
         :type nums1: List[int]

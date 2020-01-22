@@ -14,7 +14,7 @@ s = "loveleetcode",
 '''
 
 
-class Solution(object):
+class Solution:
     def firstUniqChar(self, s):
         """
         :type s: str
