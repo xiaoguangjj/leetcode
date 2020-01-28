@@ -41,6 +41,7 @@ class Solution:
         elif s == s[::-1]: return 1 # 如果字符串是回文，直接全部删除即可。
         else: return 2 # 如果字符串不是回文，我们最多需要删两次。
 
+
 if __name__=="__main__":
     s = "baabb"
     a = Solution()
