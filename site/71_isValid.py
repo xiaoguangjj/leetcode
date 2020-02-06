@@ -41,6 +41,7 @@
 栈 stack 为空： 此时 stack.pop() 操作会报错；因此，我们采用一个取巧方法，给 stack 赋初值 ?
 """
 
+
 class Solution:
     def isValid(self, s):
         dic = {'{': '}',  '[': ']', '(': ')', '?': '?'}
