@@ -49,8 +49,5 @@ class CQueue:
 if __name__ == "__main__":
     B = [[],[3],[],[],[]]
     c = CQueue()
-    c.appendTail(3)
-    c.deleteHead()
-    c.deleteHead()
-    c.deleteHead()
+    print([c.appendTail(3), c.deleteHead(), c.deleteHead(), c.deleteHead()])
 
