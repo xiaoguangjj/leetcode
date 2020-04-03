@@ -24,6 +24,8 @@
 抽屉原则：
 创建一个空抽屉，挨个遍历元素，如果不在抽屉中就放入抽屉，如果在抽屉中就返回该元素，为重复的元素
 """
+
+
 class Solution:
     def findRepeatNumber(self, nums):
         sums = set()

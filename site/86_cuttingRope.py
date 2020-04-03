@@ -18,6 +18,7 @@
 """
 import math
 
+
 class Solution:
     def cuttingRope(self, n):
         if n <= 3:

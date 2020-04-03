@@ -38,6 +38,7 @@
 
 """
 
+
 class Solution:
     def findNumberIn2DArray(self, matrix, target):
         if not matrix:

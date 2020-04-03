@@ -63,6 +63,8 @@ Dijkstra's algorithm:
 应用Dijkstra's algorithm就能得到答案。
 
 """
+
+
 class Solution:
     def findTheCity(self, n, edges, distanceThreshold):
         cost = [[float('inf') for _ in range(n)] for _ in range(n)]
