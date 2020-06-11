@@ -15,7 +15,9 @@
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
  * Definition for singly-linked list.
@@ -24,6 +26,55 @@ import "fmt"
 type ListNode struct {
 	Val int
 	Next *ListNode
+}
+
+// 生成头节点
+func New() *ListNode {
+	//下面的Val可以用来表示链表的长度
+	return &ListNode{0, nil}
+}
+
+//在链表的第i个位置前插入一个元素e，复杂度为o(n)
+func (head * ListNode) Insert(i int, e int) bool{
+	p := head
+	j := 1
+	for nil != p && j < i{
+		p = p.Next
+		j++
+	}
+	if nil == p || j > i {
+		fmt.Println("pls check i:", i)
+		return false
+	}
+	s := &ListNode{Val:e}
+	s.Next = p.Next
+	p.Next = s
+	return true
+}
+
+// 遍历链表
+func (head *ListNode) traverse(){
+	point := head.Next
+	for nil != point{
+		fmt.Println(point.Val)
+		point = point.Next
+	}
+	fmt.Println("-----------done----------")
+}
+func  main() {
+	l1 := New()
+	l1.Insert(1, 3)
+	l1.Insert(1, 4)
+	l1.Insert(1, 2)
+	l1.traverse()
+	l2 := New()
+	l2.Insert(1, 4)
+	l2.Insert(1, 6)
+	l2.Insert(1, 5)
+	l2.traverse()
+
+	result := addTwoNumbers(l1, l2)
+	result.traverse()
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode)*ListNode{
@@ -48,8 +99,28 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode)*ListNode{
 	return head.Next
 }
 
-func  main() {
-	l1 := [5]int{2, 4, 3}
-	l2 := [5]int{5, 6, 4}
-	fmt.Printf("链表求和：%d\n",addTwoNumbers(&l1, &l2))
+//next 进入l的下一位。
+func next(l *ListNode)*ListNode{
+	if l != nil {
+		return l.Next
+	}
+	return nil
+}
+
+func add(n1, n2 *ListNode, i int)(v, n int)  {
+	if n1 != nil{
+		v += n1.Val
+	}
+
+	if n2 != nil {
+		v += n2.Val
+	}
+
+	v += i
+
+	if v > 9 {
+		v -= 10
+		n = 1
+	}
+	return
 }
