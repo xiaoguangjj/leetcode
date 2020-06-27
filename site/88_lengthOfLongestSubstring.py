@@ -44,8 +44,9 @@ class Solution:
                 print('i:', i, 'occ:', occ,'rk:', rk)
             # 第 i 到 rk 个字符是一个极长的无重复字符子串
             ans = max(ans, rk - i + 1)
+            print('ans:', ans)
 
-        return ans, occ
+        return ans
 
 
 if __name__ == "__main__":
