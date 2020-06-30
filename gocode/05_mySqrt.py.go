@@ -20,6 +20,9 @@
 链接：https://leetcode-cn.com/problems/sqrtx
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
+
+//解法：我们将根号下x写成幂的形式，x的1/2次方，再使用自然对数e进行换底，即可得到
+
 package main
 
 import (
