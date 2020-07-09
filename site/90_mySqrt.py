@@ -33,7 +33,7 @@ class Solution:
         return ans + 1 if (ans + 1) ** 2 <= x else ans
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     number = 8
     s = Solution()
     print(s.mySqrt(number))
