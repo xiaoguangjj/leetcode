@@ -62,11 +62,11 @@ class Solution:
             res[i] += c
             if i == 0 or i == numRows - 1: flag = -flag
             i += flag
-        return "".jion(res)
+        return "".join(res)
 
 
 if __name__ == "__main__":
-    s = "LEETCODEISHIRING"
+    s = "LEETCOD"
     numRows = 3
     ss = Solution()
     print(ss.convert(s, numRows))
