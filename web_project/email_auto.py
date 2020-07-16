@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pycode
 # _*_ coding: utf-8 _*_
 
 import smtplib
