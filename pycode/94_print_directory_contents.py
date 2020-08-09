@@ -20,8 +20,8 @@ class Solution:
             else:
                 print(sChildPath)
 
-
 if __name__ == "__main__":
-    path = "/leetcode/pycode"
+    # 地址写绝对路径
+    path = "/Users/home/Program/leetcode/pycode"
     s = Solution()
     s.print_directory_contents(path)
