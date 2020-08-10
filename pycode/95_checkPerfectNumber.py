@@ -21,6 +21,7 @@
 链接：https://leetcode-cn.com/problems/perfect-number/solution/on05-by-yi-wen-statistics/
 """
 
+
 class Solution:
     def checkPerfectNumber(self, num):
         if num <= 1:
