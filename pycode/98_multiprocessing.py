@@ -570,7 +570,7 @@ def func(msg):
     return msg
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     pool = Pool(processes = 3)
     res_l = []
     for i in range(10):
@@ -596,7 +596,7 @@ def func(msg):
     return msg
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     pool = Pool(processes=3)
     res_l = []
     for i in range(10):
@@ -696,8 +696,9 @@ def work(n):
     time.sleep(1)
     return n**2
 
+
 if __name__=='__main__':
-    p=Pool()
+    p = Pool()
 
     res_l=[]
     for i in range(10):
