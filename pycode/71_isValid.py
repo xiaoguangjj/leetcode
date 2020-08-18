@@ -53,8 +53,9 @@ class Solution:
                 return False
         return len(stack) == 1
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     # s = "()"
-    s ="(]"
+    s = "(]"
     a = Solution()
     print(a.isValid(s))
