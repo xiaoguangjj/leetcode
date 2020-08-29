@@ -10,36 +10,23 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        for i in range(0, len(nums)-1):
-            for j in range(i+1, len(nums)-1):
+        for i in range(0, len(nums)):
+            for j in range(i+1, len(nums)):
                 if nums[i] + nums[j] == target :
+                    print(i, j)
                     return i, j
-
-
-def stringToIntegerList(input):
-    return json.loads(input)
-
-
-def stringToInt(input):
-    return int(input)
-
-
-def integerListToString(nums, len_of_list=None):
-    if not len_of_list:
-        print (nums)
-        len_of_list = len(nums)
-    return json.dumps(nums[:len_of_list])
+        return
 
 
 def main():
     import sys
-
-    nums = [2, 7, 11, 15]
-    target = 9
+    nums = [3, 2, 4]
+    target = 6
+    # nums = [2, 7, 11, 15]
+    # target = 9
 
     ret = Solution().twoSum(nums, target)
-    out = integerListToString(ret)
-    print (out)
+    print(ret)
 
 
 if __name__ == '__main__':
