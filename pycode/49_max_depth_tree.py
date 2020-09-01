@@ -30,11 +30,11 @@ class Solution:
     def maxDepth(self, root):
         # write your code here
         def find(root):
-            if (root is None):
+            if root is None:
                 return 0
             left = find(root.left)
             right = find(root.right)
-            if (left > right):
+            if left > right:
                 return left + 1
             else:
                 return right + 1
@@ -63,4 +63,3 @@ if __name__ == '__main__':
     bb.left = dd
     s = Solution()
     print(s.maxDepth(Tree))
-
