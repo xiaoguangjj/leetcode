@@ -1,21 +1,21 @@
 # -*- coding:utf-8 -*-
 
 """
-整数反转
-Given a 32-bit signed integer, reverse digits of an integer.
+7. 整数反转
+给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 
-Example 1:
+示例 1:
 
-Input: 123
-Output: 321
-Example 2:
+输入: 123
+输出: 321
+ 示例 2:
 
-Input: -123
-Output: -321
-Example 3:
+输入: -123
+输出: -321
+示例 3:
 
-Input: 120
-Output: 21
+输入: 120
+输出: 21
 """
 
 
