@@ -30,10 +30,12 @@ class Solution:
         if x == 0:
             return 0
         ans = int(math.exp(0.5 * math.log(x)))
+        print(ans, '33', (ans + 1) ** 2)
         return ans + 1 if (ans + 1) ** 2 <= x else ans
 
 
 if __name__ == "__main__":
-    number = 8
+    # number = 0.7
+    number = 2147395600
     s = Solution()
     print(s.mySqrt(number))
