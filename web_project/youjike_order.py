@@ -8,12 +8,14 @@ sys.setdefaultencoding('utf8')
 
 from pymongo import MongoClient
 
-#连接数据库
+
+# 连接数据库
 conn = MongoClient(host='127.0.0.1')
 db = conn.aoao_test
 file_name = './youjike_webhook_log.csv'
 org_order_ids_list = []
 count = 0
+
 
 def find_order(org_order_id):
     """
@@ -24,8 +26,9 @@ def find_order(org_order_id):
 
     order = db.webhook_log.find_one({"org_order_id": org_order_id, "event": "order_done"}, {"event": 1,"request_data": 1})
     # order = db.webhook_log.find_one({"org_order_id": org_order_id})
-    print order, count
+    print(order, count)
     return order
+
 
 def set_csv():
     """
@@ -39,7 +42,8 @@ def set_csv():
     writer.writerows(org_order_ids_list)
     csv_file.close()
     logging.info("%s", "==== set_shop_csv ====: 统计csv生成成功！")
-    print "==== set_shop_csv ====: 统计csv生成成功！"
+    print("==== set_shop_csv ====: 统计csv生成成功！")
+
 
 def deal():
     """
@@ -196,6 +200,7 @@ def deal():
         ]
         org_order_ids_list.append(param)
     set_csv()
+
 
 if __name__ == '__main__':
     deal()
