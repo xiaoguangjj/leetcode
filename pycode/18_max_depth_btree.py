@@ -22,6 +22,7 @@
 
 """
 
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
@@ -42,18 +43,18 @@ class Max:
 class MaxDepth:
     def maxDepth(self, root):
         """
-
+        方法：递归的办法
         :param root:
         :return:
         """
-        if root==None:
+        if root == None:
             return 0
-        leftChildHeight=self.maxDepth(root.lef)
-        rightChidHeight=self.maxDepth(root.right)
+        leftChildHeight = self.maxDepth(root.lef)
+        rightChidHeight = self.maxDepth(root.right)
         return max(leftChildHeight, rightChidHeight) + 1
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     """
                 2
                / \
