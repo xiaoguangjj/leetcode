@@ -36,22 +36,19 @@ class TreeNode:
 
 class Solution:
     '列表创建二叉树'
-    def listcreattree(self,root, llist, i):
+    def listcreattree(self, root, llist, i):
         #用列表递归创建二叉树，它其实创建过程也是从根开始a开始，创建左子树b，再创建b的左子树，如果b的左子树为空，返回None。
         #再接着创建b的右子树。
         if i < len(llist):
             if llist[i] is None:
-                return None     # 到达叶子结点
+                return      # 跳出循环
             else:
                 root = TreeNode(llist[i])
-                print('列表序号：' + str(i)+' 二叉树的值：' + str(root.val))
                 # 左结点
                 root.left = self.listcreattree(root.left, llist, 2*i+1)
-                print('left列表中的序号：', i, ' 树中的序号：', 2*i+1)
                 # 右结点
                 root.right = self.listcreattree(root.right, llist, 2*i+2)
-                print('right列表中的序号：', i, '树中的序号：', 2*i+2)
-                print('**********返回根：', root.val)
+                # print('**********返回根：', root.val)
                 return root
         return root
 
@@ -80,16 +77,15 @@ class Solution:
         if not root:
             return 0
 
-        que = collections.deque([(root, 1)])
+        que = collections.deque([(root, 1)])  # 定义双边队列
         while que:
-            node, depth = que.popleft()
+            node, depth = que.popleft()     # 队首元素出列
             if not node.left and not node.right:
                 return depth
             if node.left:
-                que.append((node.left, depth + 1))
+                que.append((node.left, depth + 1))  # 入队：修改结点，左子树的深度
             if node.right:
-                que.append((node.right, depth + 1))
-
+                que.append((node.right, depth + 1))  # 入队：修改结点，右子树的深度
         return 0
 
 
@@ -97,5 +93,5 @@ if __name__ == "__main__":
     llist = [3, 9, 20, None, None, 15, 7]
     s = Solution()
     root = s.listcreattree(None, llist, 0)
-    print(s.minDepth(root))
+    # print(s.minDepth(root))
     print(s.minDepth1(root))
