@@ -187,9 +187,11 @@ if __name__ == '__main__':
 
 # 购票行为由并发变成了串行，牺牲了运行效率，但保证了数据安全
 
+
 def search():
     dic=json.load(open('/Users/home/Documents/a.txt'))
     print('剩余票数 %s' % dic['count'])
+
 
 def get():
     dic=json.load(open('/Users/home/Documents/a.txt'))
@@ -199,6 +201,7 @@ def get():
         time.sleep(0.2) # 模拟写数据的网络延迟
         json.dump(dic, open('/Users/home/Documents/a.txt', 'w'))
         print('购票成功')
+
 
 def task(lock):
     search()
@@ -210,7 +213,7 @@ def task(lock):
 if __name__=='__main__':
     lock = Lock()
     for i in range(100): # 模拟并发100个客户端抢票
-        p=Process(target=task,args=(lock,))
+        p = Process(target=task,args=(lock,))
         p.start()
 # Queue():创建共享的进程队列，Queue是多线程安全的队列，可以使用Queue实现多线程之间的数据传递
 q = Queue(3)
@@ -297,8 +300,8 @@ if __name__=='__main__':
 
 def consumer(q):
     while True:
-        res=q.get()
-        if res is None:break  #收到结束信号则结束
+        res = q.get()
+        if res is None:break  # 收到结束信号则结束
         time.sleep(random.randint(1,3))
         print('\033[45m%s 吃 %s\033[0m' %(os.getpid(), res))
 
@@ -452,7 +455,7 @@ if __name__ == '__main__':
 
 def work(d, lock):
     with lock: # 不加锁而操作共享数据。肯定会出现数据混乱
-        d['count']-=1
+        d['count'] -= 1
 
 
 if __name__ == '__main__':

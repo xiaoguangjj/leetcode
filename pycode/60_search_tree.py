@@ -68,7 +68,7 @@ class BinaryTree(object):
 
     # 广度遍历(中序: 先读父节点,再读左子节点, 右子节点)
     def breadthFirst(self):
-        nodeStack = [self.root, ];
+        nodeStack = [self.root, ]
 
         while len(nodeStack) > 0:
             my_node = nodeStack.pop()

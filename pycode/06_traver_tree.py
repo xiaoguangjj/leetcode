@@ -29,7 +29,7 @@ class Tree(object):
             else:
                 treeNode.rchild = node
                 self.myQueue.append(treeNode.rchild)
-                self.myQueue.pop(0)     #如果此结点存在右子树，将此结点丢弃
+                self.myQueue.pop(0)     # 如果此结点存在右子树，将此结点丢弃
 
     def front_digui(self, root):
         """利用递归实现树的先序遍历"""
@@ -62,11 +62,11 @@ class Tree(object):
         myStack = []
         node = root
         while node or myStack:
-            while node:                     #从根节点开始，一直找它的左子树
+            while node:                     # 从根节点开始，一直找它的左子树
                 print(node.elem)
                 myStack.append(node)
                 node = node.lchild
-            node = myStack.pop()            #while结束表示当前节点node为空，即前一个节点没有左子树了
+            node = myStack.pop()            # while结束表示当前节点node为空，即前一个节点没有左子树了
             node = node.rchild                  #开始查看它的右子树
 
     def middle_stack(self, root):
@@ -76,10 +76,10 @@ class Tree(object):
         myStack = []
         node = root
         while node or myStack:
-            while node:                     #从根节点开始，一直找它的左子树
+            while node:                     # 从根节点开始，一直找它的左子树
                 myStack.append(node)
                 node = node.lchild
-            node = myStack.pop()            #while结束表示
+            node = myStack.pop()            # while结束表示
 
     def later_digui(self, root):
         """利用递归实现树的后序遍历"""
@@ -110,12 +110,12 @@ class Tree(object):
         myStack = []
         node = root
         while node or myStack:
-            while node:                 #从根节点开始，一直找它的左子树
+            while node:                 # 从根节点开始，一直找它的左子树
                 myStack.append(node)
                 node = node.lchild
-            node = myStack.pop()        #while结束表示当前节点node为空，即当前一个节
+            node = myStack.pop()        # while结束表示当前节点node为空，即当前一个节
             print(node.elem)
-            node = node.rchild          #开始查看它的右子树
+            node = node.rchild          # 开始查看它的右子树
 
     def later_stack(self, root):
         """利用堆栈实现树的后序遍历"""
@@ -125,7 +125,7 @@ class Tree(object):
         myStack2 = []
         node = root
         myStack1.append(node)
-        while myStack1:                 #这个while循环的功能是找出后序遍历的逆序，存在myStack2里面
+        while myStack1:                 # 这个while循环的功能是找出后序遍历的逆序，存在myStack2里面
             node = myStack1.pop()
             if node.lchild:
                 myStack1.append(node.lchild)
@@ -152,10 +152,10 @@ class Tree(object):
 
 if __name__=='__main__':
     """主函数"""
-    elems = range(10)       #生成十个数据作为树节点
-    tree = Tree()           #新建一个树对象
+    elems = range(10)       # 生成十个数据作为树节点
+    tree = Tree()           # 新建一个树对象
     for elem in elems:
-        tree.add(elem)      #逐个添加树的节点
+        tree.add(elem)      # 逐个添加树的节点
 
     print('队列试下你层次遍历:')
     tree.level_queue(tree.root)

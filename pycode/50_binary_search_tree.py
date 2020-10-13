@@ -31,9 +31,9 @@ def SearchTree(root):
 
     while root or nodes:
         if ((not root.left) and (not root.right) or root in ever_nodes):
-            if root.data <= b: #　比中序遍历的前一个值还小，不是二叉搜索树
+            if root.data <= b:  # 比中序遍历的前一个值还小，不是二叉搜索树
                 return False
-            else: #　符合条件，那继续看其他的点是否符合条件,下一个点就得比他还小了
+            else:  # 符合条件，那继续看其他的点是否符合条件,下一个点就得比他还小了
                 b = root.data
                 if len(nodes):
                     root = nodes.pop()
@@ -49,7 +49,7 @@ def SearchTree(root):
             ever_nodes.append(root)
             # 遍历完当前节点,右－＞中－＞左
             # 把左子树pop出来，以他为根节点继续往下遍历直到找到最左边的叶子节点
-            root = nodes.pop() # 把左边ｐｏｐ出来，继续往下遍历，或者到达终点
+            root = nodes.pop()  # 把左边ｐｏｐ出来，继续往下遍历，或者到达终点
 
 
 if __name__=='__main__':

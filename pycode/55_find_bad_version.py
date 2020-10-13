@@ -47,6 +47,6 @@ class Solution:
         return left
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     firstBadVersion = Solution().firstBadVersion(5)
     print(firstBadVersion)
