@@ -41,7 +41,7 @@ class Solution:
         return newHead.next
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     # 有序链表
     head1 = ListNode(2)
     n1 = ListNode(3)
@@ -67,4 +67,3 @@ if __name__=='__main__':
         res_list.append(res.val)
         res = res.next
     print(res_list)
-

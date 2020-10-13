@@ -28,7 +28,7 @@ class Solution:
         for i in data[1:]:
             node = ListNode(i)
             phead.next = node
-            phead =phead.next
+            phead = phead.next
         return phead
 
     # 功能：删除单链表中重复的值
@@ -58,5 +58,5 @@ if __name__ == "__main__":
     data = [1, 1, 2, 3, 3]
     phead = ll.cre_link(data)
     print(ll.traveling())  # 创建完列表，遍历
-    ll.deleteDuplicates()
-    print(ll.traveling())   # 删除完列表，遍历
+    # ll.deleteDuplicates()
+    # print(ll.traveling())   # 删除完列表，遍历
