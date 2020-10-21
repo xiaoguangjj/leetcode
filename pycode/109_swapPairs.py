@@ -62,6 +62,7 @@ class Solution:
             tmp = tmp.next
         return list1
 
+    # 功能：两两交换链表中的元素
     def swapPairs(self, head):
         dummyHead = ListNode(0)
         dummyHead.next = head
