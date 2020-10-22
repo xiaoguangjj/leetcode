@@ -42,7 +42,7 @@ class Solution:
         return list1
 
     # 功能：重排链表
-    # solution: 链表不能访问下标，所以，先将链表储存在线性表中，然后重建单链表。
+    # solution: 链表不能访问下标，所以，把链表存储到线性表中，然后用双指针依次从头尾取元素即可
     def reorderList(self, head):
         if not head:
             return
@@ -54,20 +54,20 @@ class Solution:
             node = node.next
 
         i, j = 0, len(vec) - 1
+        print(i,j)
         while i < j:    # 重构链表
-            vec[i].next = vec[j]
+            vec[i].next = vec[j]  # 然后用双指针依次从头尾取元素即可
             i += 1
             if i == j:
                 break
             vec[j].next = vec[i]
             j -= 1
         vec[i].next = None
-        return vec
 
 
 if __name__ == "__main__":
     ll = Solution()
-    data = [1, 2, 3, 4, 5]
+    data = [1, 2, 3, 4]
     phead = ll.cre_link(data)
     vec = ll.reorderList(phead)
-    # print(ll.traveling())  # 创建完列表，遍历
+    print(ll.traveling())  # 创建完列表，遍历
