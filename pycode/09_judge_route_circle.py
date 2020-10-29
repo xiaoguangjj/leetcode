@@ -13,14 +13,15 @@ class Solution(object):
                 x -= 1
             elif move == 'R':
                 x += 1
-        print(x,y)
+        print(x, y)
         # if x == 0 and y ==0:
         #     return True
         # else:
         #     return False
         return x == y == 0
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     moves = ['U', 'D', 'L', 'R']
     So = Solution().judgeCircle(moves)
     # print(So)

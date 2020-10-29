@@ -9,7 +9,7 @@ def reverse_string():
     b = ""
     for i in a[::-1]:
         b+=i
-    print b
+    print(b)
 
 if __name__=="__main__":
     reverse_string()

@@ -10,7 +10,7 @@ d['3'] = 3
 d['4'] = 4
 
 for k, v in d.items():
-    print k, v
+    print(k, v)
 
 d = collections.OrderedDict()
 d['1'] = 1
@@ -19,4 +19,4 @@ d['3'] = 3
 d['4'] = 4
 
 for k, v in d.items():
-    print k, v
+    print(k, v)

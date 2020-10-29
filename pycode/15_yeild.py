@@ -1,6 +1,6 @@
 # -*- encoding: UTF-8 -*-
 
-#实现一个简单的迭代器
+# 实现一个简单的迭代器
 def test():
     for i in range(10):
         yield i + 100

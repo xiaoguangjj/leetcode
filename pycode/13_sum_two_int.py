@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
-#找出数组中差值为K的数共有几对
+# 找出数组中差值为K的数共有几对
+
 
 class Solution(object):
     def getSum(self, a, b):
@@ -16,7 +17,8 @@ class Solution(object):
             a, b = (a ^ b) % MASK, ((a & b) << 1) % MASK
         return a if a <= MAX_INT else ~((a % MIN_INT) ^ MAX_INT)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     a = 3
     b = 5
     print(Solution().getSum(a,b))

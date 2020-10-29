@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 
-def test(a,b,*args, **kwargs):
+def test(a, b, *args, **kwargs):
     if args:
         print('args:',args)
     if kwargs:
