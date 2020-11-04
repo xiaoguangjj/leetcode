@@ -25,18 +25,21 @@ class TreeNode:
 
 
 class Solution:
-    # 前序遍历，创建二叉树
-    def listcreattree(self, root, llist,i):
+    '列表创建二叉树'
+    def listcreattree(self, root, llist, i):
+        # 用列表递归创建二叉树，它其实创建过程也是从根开始a开始，创建左子树b，再创建b的左子树，如果b的左子树为空，返回None。
+        # 再接着创建b的右子树。
         if i < len(llist):
             if llist[i] is None:
                 return  # 跳出循环
             else:
                 root = TreeNode(llist[i])
                 # 左结点
-                root.left = self.listcreattree(root.left, llist,i)
+                root.left = self.listcreattree(root.left, llist, 2 * i + 1)
                 # 右结点
-                root.right = self.listcreattree(root.right, llist,i)
-                print('**********返回根：', root.val)
+                root.right = self.listcreattree(root.right, llist, 2 * i + 2)
+                # print('**********返回根：', root.val)
+                return root
         return root
 
     def preorderTraversal(self, root):
