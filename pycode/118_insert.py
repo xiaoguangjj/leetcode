@@ -47,7 +47,9 @@ class Solution:
 if __name__ == "__main__":
     # intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]]
     # newInterval = [4, 8]
-    intervals = [[5, 7], [8, 9]]
-    newInterval = [1, 3]
+    # intervals = [[5, 7], [8, 9]]
+    # newInterval = [1, 3]
+    intervals = [[1, 3], [6, 9]]
+    newInterval = [2, 5]
     s = Solution()
     print(s.insert(intervals, newInterval))
