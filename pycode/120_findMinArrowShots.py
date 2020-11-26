@@ -42,15 +42,15 @@ class Solution:
     def findMinArrowShots(self, points):
         if points == []:
             return 0
-        points.sort(key=lambda x: x[1])
-        end = points[0][1]
+        points.sort(key=lambda x: x[1])  # 二维数组排序,按照二维数组的第二个值排序
+        end = points[0][1]  # 把第0个数组的第1个值，作为第一箭的坐标
         arrow = 1
 
         for i in points[1:]:
-            next_start = i[0]
+            next_start = i[0]  # 寻找与上一个箭头最靠近的，下一个区间的左边界
             if next_start > end:
                 arrow += 1
-                end = i[1]  # 记得更新end
+                end = i[1]  # 记得更新end，end为下一个区间的右边界
 
         return arrow
 
