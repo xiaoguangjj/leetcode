@@ -68,7 +68,7 @@ class Solution:
 
     # 深度遍历
     def sumNumbers(self, root):
-        def dfs(root: TreeNode, prevTotal: int) -> int:
+        def dfs(root, prevTotal):
             if not root:
                 return 0
             total = prevTotal * 10 + root.val   # prevTotal为上次的total
