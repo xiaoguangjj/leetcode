@@ -27,20 +27,39 @@
 
 import math
 
-class Solution: # 超时
+class Solution:
     def isPrime(self, num):
-        max_num = int(math.sqrt(num))
+        max_num = int(math.sqrt(num)) # 注意 i 遍历到最大 √n 即可。因为n如果不是素数，那么至少有一个因子是小于等于√n的。√n * √n = n
         for i in range(2, max_num + 1):
             if num % i == 0:
                 return False
         return True
 
-    def countPrimes(self, n: int) -> int:
+    def countPrimes(self, n):
+        # 方法一：超时
         count = 0
         for num in range(2, n):
             if self.isPrime(num):
                 count += 1
         return count
+
+    def countPrimes1(self, n):
+        #方法二：
+        # 厄拉多塞筛法：要得到自然数n以内的全部质数，必须把不大于根号 n 的所有质数的倍数剔除，剩下的就是质数。
+
+        # 最小的质数是 2
+        if n < 2:
+            return 0
+
+        isPrime = [1] * n
+        isPrime[0] = isPrime[1] = 0  # 0和1不是质数，先排除掉
+
+        # 埃式筛，把不大于根号 n 的所有质数的倍数剔除
+        for i in range(2, int(n ** 0.5) + 1):
+            if isPrime[i]:
+                isPrime[i * i:n:i] = [0] * ((n - 1 - i * i) // i + 1)
+
+        return sum(isPrime)
 
 
 
@@ -48,4 +67,4 @@ class Solution: # 超时
 if __name__=="__main__":
     n = 10  # 2,3,5,7
     s = Solution()
-    print(s.countPrimes(n))
+    print(s.countPrimes1(n))
