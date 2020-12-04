@@ -62,8 +62,6 @@ class Solution:
         return sum(isPrime)
 
 
-
-
 if __name__=="__main__":
     n = 10  # 2,3,5,7
     s = Solution()
