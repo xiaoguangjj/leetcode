@@ -56,6 +56,7 @@ class Solution:
                 ordered_set.add(r)
         return res
 
+
 if __name__=="__main__":
     n = 6
     connections = [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]]
