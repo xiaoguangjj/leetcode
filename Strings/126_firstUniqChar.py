@@ -17,6 +17,7 @@ s = "loveleetcode"
 """
 import collections
 
+
 class Solution:
     #方法一：count计数
     def firstUniqChar(self, s):
@@ -26,6 +27,7 @@ class Solution:
             if nums == 1:
                 return i # 返回索引
         return -1 # 查询不到时返回-1
+
 
     # 方法二：引用 collections.Counter()计数
     def firstUniqChar1(self, s):
