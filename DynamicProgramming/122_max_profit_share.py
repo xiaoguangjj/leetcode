@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 """
-买卖股票的最佳时机 II
+122. 买卖股票的最佳时机 II
 
 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
 
@@ -34,10 +34,10 @@ class Solution:
         if len(prices) == 0:
             return maxProfit
         for i in range(1, len(prices)):
-            maxProfit = maxProfit + max(0, prices[i]-prices[i-1])
+            maxProfit = maxProfit + max(0, prices[i]-prices[i-1])  # 能跨越天数的和，也能临近作差比较大小
         return maxProfit
 
 
-if __name__=='__main__':
-    a = [1,2,3,4,5]
-    print(Solution().maxProfit(a))
+if __name__ == '__main__':
+    prices = [7, 1, 3, 5, 3, 3, 6]
+    print(Solution().maxProfit(prices))
