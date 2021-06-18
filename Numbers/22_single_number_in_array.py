@@ -16,7 +16,13 @@
 输入: [4,1,2,1,2]
 输出: 4
 """
+"""
+解析：
+与运算是二进制数按位做相与运算再赋值，其运算规则是：
 
+0&0=0;   0&1=0;    1&0=0;     1&1=1
+
+"""
 
 def singlenumber(nums):
     num = 0
@@ -25,7 +31,7 @@ def singlenumber(nums):
     return num
 
 
-if __name__=='__main__':
-    a = [1,2,3,4,1,2,3]
+if __name__ == '__main__':
+    # a = [1,2,3,4,1,2,3]
+    a = [1, 1, 2]
     print(singlenumber(a))
-
