@@ -28,11 +28,8 @@ class Solution:
         ans = 0
         nums.sort()
         for i in range(0, len(nums)):
-            print('1',len(nums))
             for j in range(i + 1, len(nums)):
-                print('2',len(nums))
                 left, right, k = j+1, len(nums) -1, j
-                print('3',len(nums))
                 while left <= right:
                     mid = (left + right) // 2
                     if mid < nums[i] + nums[j]:
