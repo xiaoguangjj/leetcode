@@ -40,25 +40,52 @@ grid[i][j] is either 0 or 1
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/ZL6zAn
+
+
+
 链接：https://leetcode-cn.com/problems/max-area-of-island/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 
+"""
+深度优先遍历：
+1、从岛屿的某一块陆地出发，向四个方向递归地DFS
+2、为保证每一块陆地只访问一次，将已访问的陆地置为0
+3、边界判断
+4、递归，以此求解
+"""
+
 
 class Solution:
+    def dfs(self, grid, cur_i, cur_j):
+        if cur_i < 0 or cur_j < 0 or cur_i == len(grid) or cur_j == len(grid[0]) or (grid[cur_i][cur_j] != 1):
+            return 0
+        grid[cur_i][cur_j] = 0
+        ans = 1
+        for di, dj in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
+            next_i, next_j = cur_i + di, cur_j + dj
+            ans += self.dfs(grid, next_i, next_j)
+        return ans
+
     def maxAreaOfIsland(self, grid):
-        pass
+        ans = 0
+        for i, l in enumerate(grid):
+            for j,n in enumerate(l):
+                ans = max(self.dfs(grid, i, j), ans)
+        return ans
 
 
-if __name__=="__main__":
-    grid = [[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-     [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-     [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-     [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
-     [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
-     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-     [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-     [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
+if __name__ =="__main__":
+    grid = \
+        [[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+         [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+         [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
+
     s = Solution()
-    s.maxAreaOfIsland(grid)
+    print(s.maxAreaOfIsland(grid))
 
