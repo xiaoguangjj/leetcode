@@ -29,39 +29,36 @@ board[i][j] 为 'X' 或 'O'
 
 
 class Solution:
+    def dfs(self, board, cur_i, cur_j):
+        if board[cur_i][cur_j] == 'O':
+            board[cur_i][cur_j] = 'A'
+        for i, j in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
+            # 注意中间参数tmp_i, tmp_j 访问矩阵相邻的项
+            tmp_i, tmp_j = cur_i + i, cur_j + j
+            if 1 <= tmp_i < len(board) and 1 <= tmp_j < len(board[0]) and board[tmp_i][tmp_j] == "O":
+                self.dfs(board, tmp_i, tmp_j)
 
     def solve(self, board):
         """
         Do not return anything, modify board in-place instead.
         """
-        if not board or not board[0]:
-            return
         row = len(board)
         col = len(board[0])
-
-        def dfs(cur_i, cur_j):
-            # if board[cur_i][cur_j] == 'O':
-            board[cur_i][cur_j] = 'A'
-            for i, j in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
-                cur_i, cur_j = cur_i + i, cur_j + j
-                if 1 <= cur_i < len(board) and 1 <= cur_j < len(board[0]) and board[cur_i][cur_j] == "O":
-                    dfs(cur_i, cur_j)
-
         for j in range(col):
             # 第一行
             if board[0][j] == "O":
-                dfs(0, j)
+                self.dfs(board, 0, j)
             # 最后一行
             if board[row-1][j] == "O":
-                dfs(row-1, j)
+                self.dfs(board, row-1, j)
         for i in range(row):
             # 第一列
             if board[i][0] == "O":
-                dfs(i, 0)
+                self.dfs(board, i, 0)
             # 最后一列
             if board[i][col-1] == "O":
-                dfs(i, col-1)
-        return board
+                self.dfs(board, i, col-1)
+
         for i, l in enumerate(board):
             for j, m in enumerate(l):
                 if board[i][j] == 'O':
@@ -78,11 +75,11 @@ if __name__ == "__main__":
     #          ["X", "O", "O", "X"],
     #          ["X", "X", "O", "X"],
     #          ["X", "O", "X", "X"]]
-    board = [["O","X","X","O","X"],
-             ["X","O","O","X","O"],
-             ["X","O","X","O","X"],
-             ["O","X","O","O","O"],
-             ["X","X","O","X","O"]]
+    board = [["O", "X", "X", "O", "X"],
+             ["X", "O", "O", "X", "O"],
+             ["X", "O", "X", "O", "X"],
+             ["O", "X", "O", "O", "O"],
+             ["X", "X", "O", "X", "O"]]
 
     after = [['A', 'X', 'X', 'A', 'X'],
              ['X', 'O', 'O', 'X', 'A'],
