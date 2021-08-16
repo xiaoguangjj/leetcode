@@ -72,7 +72,7 @@ class Solution:
     def maxAreaOfIsland(self, grid):
         ans = 0
         for i, l in enumerate(grid):
-            for j,n in enumerate(l):
+            for j, n in enumerate(l):
                 ans = max(self.dfs(grid, i, j), ans)
         return ans
 
