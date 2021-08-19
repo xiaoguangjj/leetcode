@@ -1,14 +1,16 @@
 # -*- coding:utf-8 -*-
 
 """
-旋转图像
+48. 旋转图像
 给定一个 n × n 的二维矩阵表示一个图像。
 
 将图像顺时针旋转 90 度。
 
 说明：
 
-你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
+你必须在原地旋转图像，这意味着你需要"直接修改输入的二维矩阵"。请不要使用另一个矩阵来旋转图像。
+
+
 
 示例 1:
 
@@ -26,35 +28,37 @@
   [9,6,3]
 ]
 """
-class Solution:
 
+"""
+思路：你需要直接修改输入的二维矩阵
+这句话很重要
+
+"""
+class Solution:
     def rotate(self, matrix):
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        暴力求解法
+        :param matrix:
+        :return:
         """
-        matrix[:] = map(list, zip(*matrix[::-1]))
-        return matrix
+        n = len(matrix)
+        matrix_new = [[0]*n for _ in range(n)]
+        for i, l in enumerate(matrix):
+            for j, m in enumerate(l):
+                matrix_new[j][n-i-1] = matrix[i][j]
+        # matrix[:]=才会改变传进来的matrix值
+        # matrix=创建一个新的列表，无法修改传进来的matrix.在之前和之后打印下id，就知道了。
+        print(id(matrix))
+        matrix = matrix_new
+        print(id(matrix))
+        # return matrix
 
-    def rotate_1(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: void Do not return anything, modify matrix in-place instead.
-        """
-        num = len(matrix)
-        for i in range(0, num):
-            for j in range(i + 1, num):
-                t = matrix[i][j]
-                matrix[i][j] = matrix[j][i]
-                matrix[j][i] = t
-        for i in range(len(matrix)):
-            matrix[i] = matrix[i][::-1]
-        return matrix
 
-if __name__=='__main__':
-    matrix =[
+if __name__ == '__main__':
+    matrix = [
         [1, 2, 3],
         [4, 5, 6],
         [7, 8, 9]
     ]
-    print(Solution().rotate_1(matrix))
+    Solution().rotate(matrix)
+    print(matrix)
