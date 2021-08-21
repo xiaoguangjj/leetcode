@@ -48,10 +48,8 @@ class Solution:
                 matrix_new[j][n-i-1] = matrix[i][j]
         # matrix[:]=才会改变传进来的matrix值
         # matrix=创建一个新的列表，无法修改传进来的matrix.在之前和之后打印下id，就知道了。
-        print(id(matrix))
-        matrix = matrix_new
-        print(id(matrix))
-        # return matrix
+        matrix[:] = matrix_new
+        return matrix
 
 
 if __name__ == '__main__':
