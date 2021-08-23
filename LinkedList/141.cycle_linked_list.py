@@ -73,6 +73,6 @@ if __name__ == "__main__":
     node3.next = node4
     node4.next = node5
     node5.next = node2
-    # print(findbeginofloop(node1).item)
-    print(Solution().hasCycle(node1))
+    print(findbeginofloop(node1).item)
+    # print(Solution().hasCycle(node1))
 
