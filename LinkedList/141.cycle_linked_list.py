@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 """
-环形链表
+141. 环形链表
 给定一个链表，判断链表中是否有环。
 
 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
@@ -55,17 +55,12 @@ class Solution(object):
         :rtype: bool
         """
         mapping = set()
-        flag = False
-        p = head
-        while p:
-            if p not in mapping:
-                mapping.add(p)
+        while head:
+            if head not in mapping:
+                mapping.add(head)
+                head = head.next
             else:
-                flag = True
-                break
-            p = p.next
-
-        return flag
+                return True
 
 if __name__ == "__main__":
     node1 = Node(1)
