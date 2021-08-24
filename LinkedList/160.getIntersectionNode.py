@@ -85,6 +85,9 @@ class ListNode:
 
 
 class Solution:
+    # 返回相交的位置。双链表法，思路：让 aa, bb 指针都走一遍 headAheadA, headBheadB 两个链表, aa, bb 相遇的地方就是两个链表相交的地方.
+    # 时间复杂度 O(m+n), m, n 分别为两个链表的节点数
+    # 空间复杂度O(1)
     def getIntersectionNode(self, headA, headB):
         a, b = headA, headB
         while a != b:
@@ -99,6 +102,20 @@ class Solution:
                 b = headA
 
         return a
+    # 判断是否相交
+    # 时间复杂度O(n)
+    # 空间复杂度O(n)
+    def getIntersectionNode_(self, headA, headB):
+        s = set()
+        p, q = headA, headB
+        while p:
+            s.add(p)
+            p = p.next
+        while q:
+            if q in s:
+                return q
+            q = q.next
+        return None
 
 
 if __name__=="__main__":

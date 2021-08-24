@@ -24,21 +24,30 @@
 2.  1 阶 + 2 阶
 3.  2 阶 + 1 阶
 """
-
+import functools
 
 class Solution:
+    # 直接DP，新建一个字典或者数组来存储以前的变量，空间复杂度O(n)
     def climbStairs(self, n):
         """
         :type n: int
         :rtype: int
         """
         climb = dict()
-        climb[0], climb[1] = 1, 1
-        for i in range(2, n + 1):
+        climb[1], climb[2] = 1, 2
+        for i in range(3, n + 1):
             climb[i] = climb[i - 1] + climb[i - 2]
         print(climb,climb[n])
         return climb[n]
 
+    #直接递归解法，容易超时，python可以加个缓存装饰器，这样也算是将递归转换成迭代的形式了
+    @functools.lru_cache(100)
+    def climbStairs1(self, n):
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+        return self.climbStairs1(n-1) + self.climbStairs1(n-2)
 
 if __name__ == '__main__':
-    print(Solution().climbStairs(10))
+    print(Solution().climbStairs1(2))
