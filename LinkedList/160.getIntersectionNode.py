@@ -102,7 +102,7 @@ class Solution:
                 b = headA
 
         return a
-    # 判断是否相交
+    # 判断是否相交，两个链表。一个链表先取出来值，另一个链表判断是否存在其中
     # 时间复杂度O(n)
     # 空间复杂度O(n)
     def getIntersectionNode_(self, headA, headB):

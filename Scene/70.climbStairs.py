@@ -37,7 +37,7 @@ class Solution:
         climb[1], climb[2] = 1, 2
         for i in range(3, n + 1):
             climb[i] = climb[i - 1] + climb[i - 2]
-        print(climb,climb[n])
+        print(climb)
         return climb[n]
 
     #直接递归解法，容易超时，python可以加个缓存装饰器，这样也算是将递归转换成迭代的形式了
@@ -50,4 +50,4 @@ class Solution:
         return self.climbStairs1(n-1) + self.climbStairs1(n-2)
 
 if __name__ == '__main__':
-    print(Solution().climbStairs1(2))
+    print(Solution().climbStairs(2))
