@@ -32,12 +32,13 @@ class Solution:
         for i in nums:
             if i in sums:
                 return i
-            sums.append(i)
+            else:
+                sums.add(i)
 
 
 if __name__=="__main__":
     # a = [2, 3, 1, 0, 2, 5, 3]
     # a = [0, 0, 2, 3, 4]
-    a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 14, 15]
+    a = [0, 1, 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 14, 15]
     s = Solution()
     print(s.findRepeatNumber(a))
