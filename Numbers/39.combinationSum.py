@@ -43,17 +43,38 @@ candidate 中的每个元素都是独一无二的。
 
 """
 
+"""
+思路分析：根据示例 1：输入: candidates = [2, 3, 6, 7]，target = 7。
+
+候选数组里有 2，如果找到了组合总和为 7 - 2 = 5 的所有组合，再在之前加上 2 ，就是 7 的所有组合；
+同理考虑 3，如果找到了组合总和为 7 - 3 = 4 的所有组合，再在之前加上 3 ，就是 7 的所有组合，依次这样找下去。
+
+作者：liweiwei1419
+链接：https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+"""
 
 class Solution:
     def combinationSum(self, candidates, target):
-        ret_list = []
-        candidates.sort(reverse=True)
-        for value in candidates:
-            if value == target:
-                ret_list.append(value)
-            else:
-                pass
-        return candidates
+        def dfs(candidates, begin, size, path, res, target):
+            if target < 0:
+                return
+            if target == 0:
+                res.append(path)
+                return
+
+            for index in range(begin, size):
+                dfs(candidates, index, size, path + [candidates[index]], res, target - candidates[index])
+
+        size = len(candidates)
+        if size == 0:
+            return []
+        path = []
+        res = []
+        dfs(candidates, 0, size, path, res, target)
+        return res
+
 
 
 if __name__ == "__main__":
