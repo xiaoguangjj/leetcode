@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f7f8aba-0a05-4705-9cb5-a67164fe57e4" name="Default" comment="pyt">
-      <change afterPath="$PROJECT_DIR$/Tree/95.unique-binary-search-trees-ii.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tree/96.unique-binary-search-trees.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DynamicProgramming/62_different_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/DynamicProgramming/62_different_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/24_delete_dupliate_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/24_delete_dupliate_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/43_delete_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/43_delete_linked_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree/05_average_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tree/05_average_tree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
