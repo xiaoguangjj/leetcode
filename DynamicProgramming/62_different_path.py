@@ -12,6 +12,7 @@
 问总共有多少条不同的路径？
 """
 
+
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         f = [[1] * n] + [[1] + [0] * (n - 1) for _ in range(m - 1)]

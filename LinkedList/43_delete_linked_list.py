@@ -17,30 +17,27 @@
 
 
 class Node(object):
-    '''
+    """
     节点类
-    '''
-
+    """
     def __init__(self, data):
         self.num = data
         self.next = None
 
 
-class DeleteNode():
-    '''
+class DeleteNode:
+    """
     实现删除指定节点功能
-    '''
-
+    """
     def delete_node(self, node):
         node.num = node.next.num
         node.next = node.next.next
 
 
-class PrintNode():
-    '''
+class PrintNode:
+    """
     输出指定节点为起始节点的链表
-    '''
-
+    """
     def print_node(self, node):
         res_list = []
         while node:

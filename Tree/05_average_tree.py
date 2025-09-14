@@ -15,7 +15,6 @@
 
 
 class Average(object):
-
     def averageoflevel(self, root):
         info = []
 
