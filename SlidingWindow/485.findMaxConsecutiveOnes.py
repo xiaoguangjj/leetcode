@@ -39,7 +39,7 @@ class Solution:
         return max_length
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     # 数组的测试用例
     # nums = [1, 1, 0, 1, 1, 1]
     # 字符串的测试用例
