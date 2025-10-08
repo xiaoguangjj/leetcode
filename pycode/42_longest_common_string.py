@@ -20,6 +20,11 @@
 
 class Solution:
     def longestCommonPrefix(self, strs):
+        """
+        方法1
+        :param strs:
+        :return:
+        """
         if not strs:
             return ""
         if len(strs) == 1:
@@ -32,6 +37,22 @@ class Solution:
                     return strs[0][:end]
             end += 1
         return strs[0][:end]
+
+
+    def longestCommonPrefix1(self):
+        """
+        方法2
+        :return:
+        """
+        if not strs:
+            return ""
+
+        for i in range(len(strs[0])):
+            char = strs[0][i]
+            for s in strs[1:]:
+                if i == len(s) or s[i] != char:
+                    return strs[0][:i]
+        return strs[0]
 
 
 if __name__ == '__main__':
